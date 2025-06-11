@@ -16,8 +16,6 @@ Temperature is printed on the serial monitor every 1 second.
 
 ## 🖼️ Deliverables
 - `temperature_sensor_display.ino` – Code file
-- `circuit_diagram.png` – Circuit schematic
-- `output_demo.png` – Screenshot of serial monitor
-
+circuit diagam & output in screenshot(2)
 ## 🎓 Internship
 CodTech Solutions Embedded Systems Internship Task
