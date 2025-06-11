@@ -1,17 +1,15 @@
-int sensorPin = A0;   // LM35 connected to A0
+const int sensorPin = A0;
+float temperature;
 
 void setup() {
-  Serial.begin(9600); // Start serial communication
+  Serial.begin(9600);
 }
 
 void loop() {
-  int sensorValue = analogRead(sensorPin);
-  float voltage = sensorValue * (5.0 / 1023.0); // Convert to voltage
-  float temperatureC = voltage * 100;          // LM35: 10mV per degree
-
+  int reading = analogRead(sensorPin);
+  temperature = reading * 0.48828125;  // Convert ADC to Celsius
   Serial.print("Temperature: ");
-  Serial.print(temperatureC);
+  Serial.print(temperature);
   Serial.println(" °C");
-
-  delay(1000); // Delay 1 second
+  delay(1000);
 }
